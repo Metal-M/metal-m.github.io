@@ -326,12 +326,6 @@
 	  }
 	}
 
-    function loadLang() {
-      var lang = getParameterByName('lang'); // get {lang} argument from url
-      lang = lang ?? defaultLangCode;
-      langChange(lang);
-    }
-
     function langChange(langCode) {
       document.body.setAttribute('lang', langCode);
       var langSelectionElement = document.getElementById('langSelection').value = langCode;
