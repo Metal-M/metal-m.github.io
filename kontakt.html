@@ -186,10 +186,10 @@
                         <p class="text-white">Telefon:</p>
                       </li>
                       <li>
-                        <h6 class="text-white">+387 51 381 184</h6>
+                        <p class="text-white"><b>+387 51 381 184</b></p>
                       </li>
                       <li>
-                        <h6 class="text-white">+387 65 514 517</h6>
+                        <p class="text-white"><b>+387 65 514 517</b></p>
                       </li><br>
                       <li>
                         <p class="text-white">E-mail:</p>
@@ -281,32 +281,7 @@
       langChange(lang);
     }
 
-    function langChange(langCode) {
-      document.body.setAttribute('lang', langCode);
-      var langSelectionElement = document.getElementById('langSelection').value = langCode;
-      var links = document.getElementsByName("linkWithLang");
-      var linkArg = '?lang=';
-      for (var i = 0; i < links.length; i++) {
-        var linkValue = links[i].getAttribute('href');
-        var linkBase = linkValue;
-        var linkSufix = '';
-        var linkBaseLength = linkValue.indexOf('?');
-        if (linkBaseLength > -1) linkBase = linkValue.substring(0, linkBaseLength);
-        if (langCode != 'en') {
-          linkSufix = linkArg + langCode;
-        }
-        links[i].setAttribute('href', linkBase + linkSufix);
-      }
-    }
 
-    function getParameterByName(name, url = window.location.href) {
-      name = name.replace(/[\[\]]/g, '\\$&');
-      var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
-        results = regex.exec(url);
-      if (!results) return null;
-      if (!results[2]) return '';
-      return decodeURIComponent(results[2].replace(/\+/g, ' '));
-    }
   </script>
   <!-- jQuery-2.2.4 js -->
   <script src="js/jquery/jquery-2.2.4.min.js"></script>
