@@ -1898,7 +1898,10 @@ img {
     display: block;
     color: #fff; }
 
-
+    a[href^=tel] {
+      text-decoration:inherit;
+      color: inherit;
+   }
 
 /* ====== The End ====== */
 
